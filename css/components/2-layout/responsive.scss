@@ -1,0 +1,104 @@
+// 650px
+@include sm-md-extra {
+    @include intro-sm-md-extra;
+}
+// 540px
+@include xsm-sm  {
+    h2 {
+        font-size: 22px;
+        line-height: 26px;
+        margin-bottom: 12px;
+    }
+    .signature {
+        width: 100%;
+        margin: 12px 0;
+      }
+    .input {
+        width: 100%;
+        margin: 12px 0;
+        &.big {
+            margin: 24px 0 32px;
+        }
+        &.sm {
+            width: calc(60% - 12px);
+        }
+        &.ex {
+            width: calc(40% - 12px);
+        }
+        &.calendar {
+            margin: 20px 0 32px;
+        }
+        &.tel {
+            margin-top: 20px;
+        }
+        &__row {
+            margin: 0;
+            button {
+                margin: 0 0 8px 0;
+            }
+            & > p {
+                margin: 0 0 24px 0;
+                &.mob {
+                    display: block;
+                }
+                &.desk {
+                    display: none;
+                }
+            }
+        }
+    }
+    .check {
+        margin-top: 18px;
+        &__link {
+            margin-bottom: 30px;
+        }
+    }
+    .button {
+        margin-bottom: 0;
+        &.mob {
+            display: flex;
+        }
+        &.desk  {
+            display: none;
+        }
+    }
+    @include intro-xsm-sm;
+}
+// 440px
+@include xxsm-xsm  {
+    h2 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    h6 {
+        font-size: 12px;
+        line-height: 15px;
+    }
+    .input {
+        input {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+    p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .radio {
+        font-size: 14px;
+        line-height: 20px;
+        &__button {
+            margin-right: 8px;
+        }
+    }
+    .button {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    @include intro-xxsm-xsm;
+}
+// 390px
+@include xxxsm-xxsm  {
+    // @include intro-xxxsm-xxsm;
+}
+

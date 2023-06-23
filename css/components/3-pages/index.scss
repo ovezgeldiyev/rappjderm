@@ -1,0 +1,102 @@
+.intro {
+    padding: 27px 24px;
+    &__inner {
+        background-color: $white;
+        border-radius: 16px;
+        box-shadow: 0px 6px 6px 0px #3231350A;
+        padding: 37px 32px;
+        &-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 37px;
+        }
+        &-kids {
+            display: none;
+        }
+        &-stuff {
+            width: calc(50% - 20px);
+            max-width: 262px;
+            padding-top: 16px;
+            h6 {
+                margin-bottom: 16px;
+            }
+            p {
+                color: #33322E80;
+                margin-bottom: 24px;
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: calc(50% - 20px);
+            margin-right: 8px;
+            max-width: 253px;
+            img {
+                width: 100%;
+            }
+        }
+        &-article {
+            margin-bottom: 20px;
+            p {
+                margin-bottom: 16px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+// 650px
+@mixin intro-sm-md-extra {
+    .intro {
+
+    }
+}
+// 540px
+@mixin intro-xsm-sm {
+    .intro {
+        padding: 16px;
+        &__inner {
+            padding: 32px 24px 27px;
+            &-top {
+                flex-direction: column;
+                margin-bottom: 32px;
+            }
+            &-stuff {
+                width: 100%;
+                padding: 0;
+                h6 {
+                    margin-bottom: 8px;
+                }
+          
+            }
+            &-logo {
+                width: 100%;
+                order: -1;
+                margin:  0 0 24px 0;
+            }
+            &-article {
+                padding-top: 18px;
+            }
+            &-kids {
+                h2 {
+                    span {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+// 440px
+@mixin intro-xxsm-xsm {
+    .intro {
+
+    }
+}

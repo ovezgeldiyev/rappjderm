@@ -1,0 +1,338 @@
+h1 {
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: $black;
+  margin-bottom: 20px;
+}
+
+h3 {
+}
+
+h4 {
+}
+
+h5 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+h6 {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+p {
+  &.sm {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  &.ex {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  &.dark {
+    font-weight: 600;
+    color: $black-3;
+  }
+}
+main {
+  overflow: hidden;
+}
+.button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 30px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: $black-2;
+  border-radius: 12px;
+  background-color: $main;
+  margin-bottom: 23px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  &:hover {
+    opacity: 0.9;
+  }
+  &.mob {
+    display: none;
+  }
+}
+.input {
+  border-radius: 12px;
+  border: 1px solid #e2e2e9;
+  background-color: $white-2;
+  margin: 12px;
+  width: calc(50% - 24px);
+  padding: 8px 16px;
+  display: flex;
+  flex-direction: column;
+  &.big {
+    width: 100%;
+    max-width: 480px;
+    margin: 32px 0 40px;
+  }
+  &.sm {
+    width: calc(31% - 24px);
+  }
+  &.ex {
+    width: calc(19% - 24px);
+  }
+  &.signature {
+    margin-bottom: 8px;
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 -12px 20px;
+    &.big {
+      .input {
+        width: 100%;
+        &:last-child {
+          margin-bottom: 8px;
+        }
+      }
+    }
+    button {
+      display: inline-flex;
+      align-items: center;
+      color: $red;
+      font-size: 12px;
+      line-height: 20px;
+      font-weight: 400;
+      cursor: pointer;
+      transition: 0.3s ease;
+      margin: 0 0 8px 12px;
+      background-color: transparent;
+      &:hover {
+        opacity: 0.8;
+      }
+      span {
+        width: 24px;
+        height: 24px;
+        margin-right: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    & > p {
+      width: 100%;
+      color: $gray;
+      margin: 0 0 20px 12px;
+      &.mob {
+        display: none;
+      }
+    }
+  }
+  &__inner {
+    width: 100%;
+    position: relative;
+    &-error {
+      display: none;
+      font-size: 14px;
+      line-height: 16px;
+      color: $red;
+    }
+    span {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(-50%);
+      img {
+        width: 100%;
+      }
+    }
+  }
+  p {
+    color: $gray;
+    margin-bottom: 4px;
+  }
+  input {
+    width: 100%;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: $black-2;
+    background-color: transparent;
+  }
+}
+.radio {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+  cursor: pointer;
+  &:last-child {
+    margin-right: 0;
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    max-width: 320px;
+    margin-bottom: 20px;
+  }
+
+  &__button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 10px;
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      border: 2px solid $gray;
+      background-color: transparent;
+      transition: 0.3s ease;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &::before {
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        content: "";
+        border-radius: 50%;
+        background-color: $main;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.3s ease;
+        opacity: 0;
+        z-index: 1;
+      }
+    }
+    input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      opacity: 0;
+      cursor: pointer;
+      &:checked {
+        & ~ span {
+          border-color: $main;
+          &::before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  p {
+    font-weight: 500;
+  }
+}
+.check {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+  cursor: pointer;
+  max-width: 320px;
+  color: $black;
+  font-weight: 500;
+  &__link {
+    display: inline-flex;
+    margin-left: 56px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    color: $purple;
+    text-decoration: underline;
+    margin-bottom: 40px;
+  }
+  &__button {
+    width: 48px;
+    height: 30px;
+    position: relative;
+    margin-right: 8px;
+  }
+  span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 60px;
+    z-index: 1;
+    transition: 0.3s ease;
+    background-color: $gray;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      z-index: 1;
+      background-color: $white;
+      top: 50%;
+      left: 3px;
+      transform: translateY(-50%);
+      transition: 0.3s ease;
+    }
+  }
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+    &:checked {
+      & ~ span {
+        background-color: $main;
+        &::before {
+          transform: translate(76%, -50%);
+        }
+      }
+    }
+  }
+}
+
+.signature {
+  border-radius: 12px;
+  border: 1px solid #e2e2e9;
+  background-color: #f6f6f8;
+  margin: 12px;
+  width: calc(100% - 24px);
+  padding: 8px 16px;
+  display: flex;
+  flex-direction: column;
+  label {
+    font-size: 12px;
+    line-height: 20px;
+    color: $gray;
+    margin-bottom: 4px;
+  }
+  &__inner {
+    overflow: hidden;
+    canvas {
+      position: relative;
+    }
+  }
+}

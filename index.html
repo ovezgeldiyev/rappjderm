@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Home</title>
+  </head>
+  <body onload="init()">
+    <main>
+      <!-- intro start
+    =========================================== -->
+      <section class="intro">
+        <div class="auto__container">
+          <div class="intro__inner">
+            <div class="intro__inner-top">
+              <div class="intro__inner-stuff">
+                <h6>
+                  Fachärzte für Dermatologie <br />
+                  und Venerologie FMH
+                </h6>
+                <p class="sm">
+                  Dr. med. Christian Bull Dr. <br />
+                  Dr. med. Susanne Kristof <br />
+                  Dr. med. Eva Roffler-Sailer <br />
+                  Dr. med. Peter Bajaky
+                </p>
+                <h6>
+                  Facharzt für Plastische, Rekonstruktive und Ästhetische
+                  Chirurgie FMH
+                </h6>
+                <p class="sm">Dr. med. Tobias Brandenburg</p>
+              </div>
+              <div class="intro__inner-logo">
+                <img src="./images/logo.png" alt="" />
+              </div>
+            </div>
+            <form action="" class="form">
+              <h2>Persönliche Informationen</h2>
+              <div class="input__row">
+                <label class="input">
+                  <p class="ex">Vorname</p>
+                  <div class="input__inner">
+                    <input type="text" value="Terry" />
+                  </div>
+                </label>
+                <label class="input">
+                  <p class="ex">Nachname</p>
+                  <div class="input__inner">
+                    <input type="text" value="Curtis" />
+                  </div>
+                </label>
+                <label class="input calendar">
+                  <p class="ex">Geburtsdatum</p>
+                  <div class="input__inner">
+                    <input
+                      type="text"
+                      value="11.02.1984"
+                      class="datepicker"
+                      id="datepicker"
+                    />
+                    <span>
+                      <img src="./images/icons/calendar.png" alt="" />
+                    </span>
+                  </div>
+                </label>
+              </div>
+              <div class="radio__row">
+                <label for="radio-1" class="radio">
+                  <div class="radio__button">
+                    <input type="radio" id="radio-1" name="gender" />
+                    <span></span>
+                  </div>
+                  <p>Weiblich</p>
+                </label>
+                <label for="radio-2" class="radio">
+                  <div class="radio__button">
+                    <input type="radio" id="radio-2" name="gender" />
+                    <span></span>
+                  </div>
+                  <p>Männlich</p>
+                </label>
+                <label for="radio-3" class="radio">
+                  <div class="radio__button">
+                    <input type="radio" id="radio-3" name="gender" checked />
+                    <span></span>
+                  </div>
+                  <p>Divers</p>
+                </label>
+              </div>
+              <div class="input__row">
+                <label class="input">
+                  <p class="ex">Adresse</p>
+                  <div class="input__inner">
+                    <input type="text" value="Musterstrasse 13" />
+                  </div>
+                </label>
+                <label class="input sm">
+                  <p class="ex">Stadt</p>
+                  <div class="input__inner">
+                    <input type="text" value="Musterstadt" />
+                  </div>
+                </label>
+                <label class="input ex">
+                  <p class="ex">PLZ</p>
+                  <div class="input__inner">
+                    <input type="text" value="0000" />
+                  </div>
+                </label>
+                <label class="input tel">
+                  <p class="ex">Telefon</p>
+                  <div class="input__inner">
+                    <input type="text" value="000 000 00 00" />
+                  </div>
+                </label>
+                <label class="input">
+                  <p class="ex">Mobile</p>
+                  <div class="input__inner">
+                    <input type="text" value="000 000 00 00" />
+                  </div>
+                </label>
+                <label class="input tel">
+                  <p class="ex">E-Mail</p>
+                  <div class="input__inner">
+                    <input type="email" value="terry-c@gmail.com" />
+                  </div>
+                </label>
+              </div>
+              <label for="checkbox" class="check">
+                <div class="check__button">
+                  <input type="checkbox" id="checkbox" checked />
+                  <span></span>
+                </div>
+                <p>
+                  Ich willige der Unverschlüsselten <br />
+                  Kommunikation per Mail ein
+                </p>
+              </label>
+              <a class="check__link" href="#"> Bestimmungen lesen </a>
+              <div class="intro__inner-kids" id="kids">
+                <h2>Kinder und Jugendliche unter 18 <span>Jahren</span></h2>
+                <div class="input big">
+                  <p class="ex">Name / Vorname der Eltern</p>
+                  <div class="input__inner">
+                    <input type="text" value="Marc Zuckerberg" />
+                  </div>
+                </div>
+              </div>
+              <h2>Versicherungsinformationen</h2>
+              <div class="input__row">
+                <label class="input">
+                  <p class="ex">AHV-Nummer</p>
+                  <div class="input__inner">
+                    <input
+                      type="text"
+                      value="123.4567.8912.345"
+                      id="ahvNumber"
+                    />
+                    <div class="input__inner-error" id="ahvError">
+                      Not Valid
+                    </div>
+                  </div>
+                </label>
+                <label class="input">
+                  <p class="ex">Hausarzt</p>
+                  <div class="input__inner">
+                    <input type="text" value="Permanence Rapperswil" />
+                  </div>
+                </label>
+              </div>
+              <div class="intro__inner-article">
+                <p>
+                  Ich ermächtige die behandelnden ÄrztInnen der
+                  Praxisgemeinschaft rappjderm medizinische Akten und
+                  Informationen, die im Zusammenhang mit meiner Behandlung
+                  stehen, von anderen ÄrztInnen im oder ausserhalb der rappjderm
+                  Praxis anzufordern. Weiter gebe ich mein Einverständnis, dass
+                  die Untersuchungs- und Behandlungsergebnisse oder die
+                  Beurteilung dem nachbehandelnden oder zuweisenden Arzt bekannt
+                  gegeben werden dürfen.
+                </p>
+                <p>
+                  Ich erteile die Erlaubnis, die für die Rechnungsstellung
+                  erforderlichen Daten sowohl an die Rechnungsstellende
+                  (Ärztekasse) als auch an die mit einem allfälligen Inkasso
+                  beauftragte Institution oder den damit befassten Rechtsanwalt
+                  sowie die zuständigen staatlichen Instanzen weiterzuleiten.
+                </p>
+                <p>
+                  Meine Rechnung darf direkt an die Krankenversicherung (System
+                  „tiers payant“) gesandt werden. Eine Rechnungskopie wird mir
+                  von der Ärztekasse per E-Mail zugestellt.Meine Rechnung darf
+                  direkt an die Krankenversicherung (System „tiers payant“)
+                  gesandt werden. Eine Rechnungskopie wird mir von der
+                  Ärztekasse per E-Mail zugestellt.
+                </p>
+                <p class="dark">
+                  Im Verhinderungsfall bitten wir Sie, sich 24h zuvor abzumelden
+                  anderenfalls werden wir Ihnen CHF 50.00 in Rechnung stellen.
+                  Bei Terminen, welche 30 Minuten (z.B. Operationstermin) oder
+                  länger dauern, werden Ihnen CHF 150.00 in Rechnung gestellt.
+                </p>
+                <p>
+                  Anwendbares Gesetz: Für die Rechtsbeziehung der Parteien und
+                  insbesondere für sämtliche Ansprüche im Zusammenhang der
+                  Untersuchungen, Behandlungen und jeglichen weiteren Leistungen
+                  ist das schweizerische materielle Recht anwendbar.
+                  Gerichtsstand für sämtliche Streitigkeiten im Zusammenhang mit
+                  dieser Vereinbarung ist ausschliesslich Jona (Schweiz). Der
+                  Arzt / die Ärztin ist berechtigt, nach eigener freier Wahl
+                  auch die ordentlichen Gerichte am Sitz des Patienten
+                  anzurufen.
+                </p>
+                <p>Ich habe dieses Dokument gelesen und verstanden.</p>
+              </div>
+              <div class="input__row big">
+                <label class="input">
+                  <p class="ex">Ort, Datum</p>
+                  <div class="input__inner">
+                    <input type="text" value="08/04/2023" id="currentDate" />
+                  </div>
+                </label>
+                <div class="signature">
+                  <label class="ex">Unterschrift</label>
+                  <div class="signature__inner">
+                    <canvas id="sketchpad" width="600" height="100"></canvas>
+                    <input
+                      type="hidden"
+                      name="save_remote_data"
+                      id="save_remote_data"
+                    />
+                  </div>
+                </div>
+                <button type="button" id="canvasCleaner">
+                  <span>
+                    <img src="./images/icons/close.png" alt="" />
+                  </span>
+                  Unterschrift löschen
+                </button>
+                <p class="ex desk">Draw your signature into the box above</p>
+                <p class="ex mob">Zeichnen Sie Ihre Unterschrift in das Feld</p>
+              </div>
+              <button type="submit" class="button desk">Submit</button>
+              <button type="submit" class="button mob">Speichern</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- intro end
+    =========================================== -->
+    </main>
+    <!-- js
+    =========================================== -->
+
+    <script src="./js/datepickerMin.js"></script>
+    <script src="./js/datepicker.js"></script>
+    <script src="./js/signature.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
